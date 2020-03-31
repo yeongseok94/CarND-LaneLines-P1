@@ -26,12 +26,15 @@ The goals / steps of this project are the following:
 Overall pipline can be easily found in "LaneDetection.process_image()".
 
 **Step 1. Grayscale Image**
+
 First, I grayscaled the image for further processing. Here, I used openCV "cvtColor" function.
 
 **Step 2. Obtain Gaussian Blurred Image**
+
 Next, I removed noises with Gaussian filter of kernel size 5. Here, I used openCV "GaussianBlur" function.
 
 **Step 3. Obtain Edges with Canny Transform**
+
 Next, I obtained edges with Canny transform. Here, I used openCV "Canny" function.
 The low and high thresholds are set as 50 and 150.
 
