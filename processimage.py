@@ -31,7 +31,7 @@ class LaneDetection:
         blurimage = self.gaussian_blur(grayimage)
         
         ### Canny transform
-        cannyimage = self.canny(grayimage)
+        cannyimage = self.canny(blurimage)
         
         ### mask onto cannyimage
         self.imshape = image.shape

@@ -1,8 +1,6 @@
 # **Report: Finding Lane Lines on the Road** 
 
-Also uploaded on:
-
-https://github.com/yeongseok94/CarND-LaneLines-P1.git
+Also uploaded on GitHub Repository: https://github.com/yeongseok94/CarND-LaneLines-P1.git
 
 ---
 
@@ -16,32 +14,29 @@ The goals / steps of this project are the following:
 
 ## Code Description
 
-* helperfunction.py: Copied version on helper functions described in P1.ipynb. Not used in running of the code.
-* lanedetection_test.py: Test code used for detailed test.
-* lanedetection_video.py: Main code for lane detection on the test videos.
-* processimage.py: Necessary classes and functions for lane detection. Especially, 'process_image' shows the overall pipeline.
+* "helperfunction.py": Copied version on helper functions described in P1.ipynb. Not used in running of the code.
+* "lanedetection_test.py": Test code used for detailed test.
+* "lanedetection_video.py": Main code for lane detection on the test videos.
+* "processimage.py": Necessary classes and functions for lane detection. Especially, "LaneDetection.process_image()" shows the overall pipeline.
 
-## Reflection on work
+## Reflection on Work
 
-### 1. Pipeline description
+### 1. Pipeline Description
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+Overall pipline can be easily found in "LaneDetection.process_image()".
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+**Grayscale Image**
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+First, I grayscaled the image for further processing. Here, I used openCV "cvtColor" function.
 
-![alt text][image1]
-
-
-### 2. Potential shortcomings
+### 2. Potential Shortcomings
 
 One potential shortcoming would be what would happen when ... 
 
 Another shortcoming could be ...
 
 
-### 3. Suggestion on improvements
+### 3. Suggestion on Improvements
 
 A possible improvement would be to ...
 
