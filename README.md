@@ -38,6 +38,24 @@ Next, I removed noises with Gaussian filter of kernel size 5. Here, I used openC
 Next, I obtained edges with Canny transform. Here, I used openCV "Canny" function.
 The low and high thresholds are set as 50 and 150.
 
+**Step 4. Mask onto Canny Transformed Image**
+
+Next, I masked the possible lane region onto Canny transformed image. Here, I used openCV "fillPoly" function.
+The region of interest is trapezoidal area that covers about lower quarter of the image slightly above from the bottom of the image.
+Note that the bottom of the region is not equal to the bottom of the image in order to reject fron area of the car.
+Vertices of the trapezoidal area are defined as relative value proportional to image size.
+
+**Step 5. Line Candidates by Hough Transform**
+
+Next, I obtained line candidates by Hough transform. Here, I used openCV "HoughLinesP" function.
+I selected distance resolution as 1px, angular resolution as 1deg, minimum number of votes as 1, minimum line length as 40px, and maximum line gap as 20px.
+
+**Step 6. Selection of Left and Right Lines of the Lane**
+
+Final procedure includes the deciding lane lines with obtained line candidates.
+
+
+
 ### 2. Potential Shortcomings
 
 One potential shortcoming would be what would happen when ... 
