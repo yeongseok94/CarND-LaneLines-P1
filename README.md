@@ -73,13 +73,17 @@ Finally, I selected one single right lane line and left lane line by averaging t
 
 ### 2. Potential Shortcomings
 
-One potential shortcoming would be what would happen when ... 
+The output lane line has oscillation as time goes by. This is because the proposed pipeline only includes the processing within the frame, and does not consider the time-varying effect of the lane line.
 
-Another shortcoming could be ...
+Also, there is such cases that no line candidates left, therefore no output is generated.
 
+Additionally, this code does not include adjusting thresholds on canny transform, so the output is highly sensitive to the overall brightness around the lane line area.
 
 ### 3. Suggestion on Improvements
 
-A possible improvement would be to ...
+The oscillation of the output lane line can be improved by introducing proper lowpass filter or time averaging, Kalman Filter, etc.
+This is possible since lane lines always moves quite slow, i.e. there is no such cases that lane line jumps across hundreds of pixels in one frame.
 
-Another potential improvement could be to ...
+Also, if there is no line candidates left, we can just preserve the previous lane line output or possibly extrapolate line variables with respect to time.
+
+Additional considerations on brightness adjustment around the lane line area and consideration on the colors of the pixels can improve the performance.
