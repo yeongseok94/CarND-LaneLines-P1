@@ -1,6 +1,8 @@
 # **Report: Finding Lane Lines on the Road** 
 
-Also uploaded on GitHub Repository: https://github.com/yeongseok94/CarND-LaneLines-P1.git
+Uploaded on GitHub Repository: https://github.com/yeongseok94/CarND-LaneLines-P1.git
+
+Forked from Self-Driving Car Nanodegree Project 1: https://github.com/udacity/CarND-LaneLines-P1.git
 
 ---
 
