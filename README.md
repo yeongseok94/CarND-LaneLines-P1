@@ -52,8 +52,21 @@ I selected distance resolution as 1px, angular resolution as 1deg, minimum numbe
 
 **Step 6. Selection of Left and Right Lines of the Lane**
 
-Final procedure includes the deciding lane lines with obtained line candidates.
+Final procedure includes deciding the lane lines with obtained line candidates.
 
+First, I categorized the line candidates into left line candidates and right line candidates with slopes of the lines.
+Right line candidates should have positive slope values,
+and left line candidates should have negative slope values.
+
+Next, I narrowed down each line candidates by checking where on the bottom of the image the extrapolated line segments go through.
+Proper right line candidates should go through right half of the bottom of the image,
+and left line candidates should go through left half of the bottom of the image.
+
+Next, I again narrowed down each line candidates by checking whether the slope of the line is inside ±5deg with respect to the median value among them.
+Here I simply selected median value as a priori estimate of the slope, but it can be some other value.
+This procedure is to reject unexpected line expectation.
+
+Finally, I selected one single right lane line and left lane line by averaging the line parameters of the line candidates and visualized it on the image.
 
 
 ### 2. Potential Shortcomings
